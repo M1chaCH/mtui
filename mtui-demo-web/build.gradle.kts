@@ -1,9 +1,6 @@
 plugins {
-    id("java")
+    alias(libs.plugins.kotlin.jvm)
 }
-
-group = "ch.michu.tech.mtui.demo"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()

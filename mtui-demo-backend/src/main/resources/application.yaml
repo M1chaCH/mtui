@@ -1,7 +1,8 @@
 ktor:
   application:
     modules:
-      - ch.michu.tech.tui.demo.ApplicationKt.module
+      - ch.michu.tech.tui.backend.ApplicationKt.setupTuiBackend
+      - ch.michu.tech.tui.demo.backend.ApplicationKt.setupTodo
   deployment:
     port: 8080
 postgres:

@@ -1,14 +1,6 @@
 plugins {
-    id("java")
-    kotlin("jvm")
+    alias(libs.plugins.kotlin.jvm)
 }
-
-kotlin {
-    jvmToolchain(25)
-}
-
-group = "ch.michu.tech.mtui"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()

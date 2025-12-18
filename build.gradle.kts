@@ -1,26 +1,13 @@
 plugins {
-    id("java")
-    kotlin("jvm")
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.ktor) apply false
+    alias(libs.plugins.kotlin.plugin.serialization) apply false
 }
 
-kotlin {
-    jvmToolchain(25)
+subprojects {
+    group = "ch.michu.tech.mtui"
+    version = "1.0-SNAPSHOT"
 }
 
 group = "ch.michu.tech.mtui"
 version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    implementation(kotlin("stdlib-jdk8"))
-}
-
-tasks.test {
-    useJUnitPlatform()
-}

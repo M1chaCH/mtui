@@ -7,16 +7,8 @@ fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
 }
 
-fun Application.module() {
+fun Application.setupTodo() {
 //    APP
 //    configureDependencyInjection()
-
-//    WEB (TODO)
-//    configureMonitoring()
-//    configureSecurity()
-//    configureHTTP()
-//    configureRouting()
-//    configureSockets()
-
-    TuiBackend.setup()
+//    TuiBackend.setup()
 }
